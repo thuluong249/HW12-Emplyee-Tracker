@@ -29,13 +29,6 @@ You will need to install all the packages using npm, beside that you will need t
 
 ---
 
-![...](...)
-
---- 
-
-![...](...)
-
----
 
 # 🙈 Test
 
@@ -50,3 +43,4 @@ If you have any questions, here is a link to my github as well as my email addre
 * [Github](https://github.com/thuluong249)
 
 * <a href="mailto:thujtn2019@gmmail.com">💌 Email</a> 
+

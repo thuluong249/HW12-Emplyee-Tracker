@@ -10,6 +10,7 @@ const connection = mysql.createConnection({
   database: "employeeDB",
 });
 
+//Prompt to start
 const start = () => {
   inquirer
     .prompt({
@@ -18,10 +19,10 @@ const start = () => {
       message: "What would you like to do?",
       choices: [
         "Add Department",
-        "Add Role",
-        "Add Employee",
         "View Department",
+        "Add Role",
         "View Role",
+        "Add Employee",
         "View Employees",
         "Remove Employees",
         "Update Employee Roles",
@@ -34,20 +35,20 @@ const start = () => {
           addDepartment();
           break;
 
-        case "Add Role":
-          addRole();
-          break;
-
-        case "Add Employee":
-          addEmployee();
-          break;
-
         case "View Department":
           viewDepartment();
           break;
 
+        case "Add Role":
+          addRole();
+          break;
+
         case "View Role":
           viewRole();
+          break;
+
+        case "Add Employee":
+          addEmployee();
           break;
 
         case "View Employees":
@@ -58,7 +59,7 @@ const start = () => {
           removeEmployee();
           break;
 
-        case "Update Employee Role":
+        case "Update Employee Roles":
           updateEmployeeRole();
           break;
 
@@ -73,6 +74,7 @@ const start = () => {
     });
 };
 
+// prompt add department
 const addDepartment = () => {
   inquirer
     .prompt([
@@ -103,6 +105,7 @@ const addDepartment = () => {
     });
 };
 
+// prompt view department
 const viewDepartment = () => {
   connection.query("SELECT * FROM department", (err, res) => {
     if (err) throw err;
@@ -111,6 +114,7 @@ const viewDepartment = () => {
   });
 };
 
+// prompt add role
 const addRole = () => {
   inquirer
     .prompt([
@@ -154,6 +158,7 @@ const addRole = () => {
     });
 };
 
+// prompt view role
 const viewRole = () => {
   connection.query("SELECT * FROM role", (err, res) => {
     if (err) throw err;
@@ -162,6 +167,7 @@ const viewRole = () => {
   });
 };
 
+// prompt add employee
 const addEmployee = () => {
   inquirer
     .prompt([
@@ -210,6 +216,7 @@ const addEmployee = () => {
     });
 };
 
+// prompt view employee
 const viewEmployee = () => {
   connection.query("SELECT * FROM employee", (err, res) => {
     if (err) throw err;
@@ -218,6 +225,7 @@ const viewEmployee = () => {
   });
 };
 
+//prompt remove employee
 const removeEmployee = () => {
   inquirer
     .prompt([
@@ -266,6 +274,7 @@ const removeEmployee = () => {
     });
 };
 
+//prompt epdate employee role
 const updateEmployeeRole = () => {
   inquirer
     .prompt([
@@ -309,9 +318,8 @@ const updateEmployeeRole = () => {
     });
 };
 
-// connect to the mysql server and sql database
 connection.connect((err) => {
   if (err) throw err;
-  // console.log("Success!")
+  console.log(`connented as id ${connection.threadId}\n`);
   start();
 });
