@@ -5,16 +5,16 @@
 ![License](https://img.shields.io/badge/LICENSE-MIT-GREEN)
 
 
-# Description
+# 📝🔖 Description 📝🔖
 
 Emloyee tracker is an application that allows user to manage their employees in a content managerment system. The user can also view and manage all the departments, roles and employee.
 
-# Links
+# 🔗 Link
 
-- [Heroku-employee-tracker](...)
-- [Github-employee-tracker](...)
+- [Github-employee-tracker](https://thuluong249.github.io/hw12-emplyee-tracker/)
 
-# Installation Instruction.
+# 📄 Installation Instruction.
+
 You will need to install all the packages using npm, beside that you will need to installation of MySql with Workbench to work with this application.
 
 - [Node.js](https://nodejs.org/en/)
@@ -23,7 +23,7 @@ You will need to install all the packages using npm, beside that you will need t
 - [Inquirer]()
 - [MySql](https://www.mysql.com/)
 
-# Screenshot
+# 📸 Screenshot 📸
 
 ![runtest](./Assets/run.png)
 
@@ -37,7 +37,7 @@ You will need to install all the packages using npm, beside that you will need t
 
 ---
 
-# Test
+# 🙈 Test
 
 To test this application, open a command line prompt and run node index.js or npm start.
 
@@ -49,4 +49,4 @@ If you have any questions, here is a link to my github as well as my email addre
 
 * [Github](https://github.com/thuluong249)
 
-* <a href="mailto:thujtn2019@gmmail.com">Email</a> 
+* <a href="mailto:thujtn2019@gmmail.com">💌 Email</a> 
