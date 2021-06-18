@@ -79,11 +79,6 @@ const addDepartment = () => {
   inquirer
     .prompt([
       {
-        name: "id",
-        type: "input",
-        message: "What is the department id?",
-      },
-      {
         name: "name",
         type: "input",
         message: "What is the department name?",
@@ -93,7 +88,6 @@ const addDepartment = () => {
       connection.query(
         "INSERT INTO department SET ?",
         {
-          id: answer.id,
           name: answer.name,
         },
         (err) => {
@@ -119,11 +113,6 @@ const addRole = () => {
   inquirer
     .prompt([
       {
-        name: "id",
-        type: "input",
-        message: "What is the role id?",
-      },
-      {
         name: "title",
         type: "input",
         message: "What is the role title?",
@@ -143,7 +132,6 @@ const addRole = () => {
       connection.query(
         "INSERT INTO role SET ?",
         {
-          id: answer.id,
           title: answer.title,
           salary: answer.salary,
           department_id: answer.depId,
@@ -172,11 +160,6 @@ const addEmployee = () => {
   inquirer
     .prompt([
       {
-        name: "id",
-        type: "input",
-        message: "What is the employee id?",
-      },
-      {
         name: "firstName",
         type: "input",
         message: "What is the employee first name?",
@@ -201,7 +184,6 @@ const addEmployee = () => {
       connection.query(
         "INSERT INTO employee SET ?",
         {
-          id: answer.id,
           first_name: answer.firstName,
           last_name: answer.lastName,
           role_id: answer.roleID,
@@ -230,11 +212,6 @@ const removeEmployee = () => {
   inquirer
     .prompt([
       {
-        name: "id",
-        type: "input",
-        message: "What is the employee id you want to remove?",
-      },
-      {
         name: "firstName",
         type: "input",
         message: "What is the first name of that person?",
@@ -259,7 +236,6 @@ const removeEmployee = () => {
       connection.query(
         "INSERT INTO employee SET ?",
         {
-          id: answer.id,
           first_name: answer.firstName,
           last_name: answer.lastName,
           role_id: answer.roleID,
@@ -278,11 +254,6 @@ const removeEmployee = () => {
 const updateEmployeeRole = () => {
   inquirer
     .prompt([
-      {
-        name: "id",
-        type: "input",
-        message: "What is the employee id?",
-      },
       {
         name: "firstName",
         type: "input",
@@ -303,7 +274,6 @@ const updateEmployeeRole = () => {
       connection.query(
         "INSERT INTO role SET ?",
         {
-          id: answer.id,
           first_name: answer.firstName,
           last_name: answer.lastName,
           role_id: answer.roleID,
