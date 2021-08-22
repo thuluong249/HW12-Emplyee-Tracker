@@ -7,7 +7,7 @@
 
 # 📝🔖 Description 📝🔖
 
-Emloyee tracker is an application that allows user to manage their employees in a content managerment system. The user can also view and manage all the departments, roles and employee.
+Employee tracker is an application that allows user to manage their employees in a content managerment system. The user can also view and manage all the departments, roles and employee.
 
 # 🔗 Link
 
